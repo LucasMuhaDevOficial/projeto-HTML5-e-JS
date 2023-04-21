@@ -1,0 +1,17 @@
+const form = document.querySelector('#login-form');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Impede o envio do formulário padrão
+
+  const username = form.elements.username.value;
+  const password = form.elements.password.value;
+
+  // Verifica se o nome de usuário e senha estão corretos
+  if (username === 'usuario' && password === 'senha') {
+    alert('Bem-vindo!');
+    // Redireciona para a página de login bem-sucedida
+    window.location.href = 'sucesso.html';
+  } else {
+    alert('Nome de usuário ou senha incorretos!');
+  }
+});
